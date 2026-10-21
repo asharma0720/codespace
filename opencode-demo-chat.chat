@@ -1,0 +1,189 @@
+{
+  "messages": [
+    {
+      "raw_time": false,
+      "metadata": {
+        "model": {
+          "settings": {},
+          "id": null
+        },
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+        "settings": {}
+      },
+      "time": 1791216049.917028,
+      "id": "d4cf5fd4-7462-48f0-ad90-650a6dee3d19",
+      "sender": "29d96556b36d42b39f4458abf5453d83",
+      "body": "hi",
+      "type": "msg"
+    },
+    {
+      "mentions": [],
+      "raw_time": false,
+      "time": 1791216052.5134737,
+      "body": "Hi! What can I help you with?",
+      "id": "bf179a51-cbef-4e10-811f-b022a44d73bf",
+      "type": "msg",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+    },
+    {
+      "metadata": {
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+        "settings": {},
+        "model": {
+          "settings": {},
+          "id": null
+        }
+      },
+      "time": 1791216071.8666358,
+      "body": "Can you read opencode-demo.ipynb for me?",
+      "raw_time": false,
+      "type": "msg",
+      "sender": "29d96556b36d42b39f4458abf5453d83",
+      "id": "ad6d674e-ee5a-4e25-818d-6ed45cb6596d"
+    },
+    {
+      "raw_time": false,
+      "mentions": [],
+      "body": "",
+      "id": "3ee8f288-89d8-43d7-b407-87bd8982eb8d",
+      "type": "msg",
+      "time": 1791216072.9963017,
+      "metadata": {
+        "tool_calls": [
+          {
+            "raw_output": {
+              "metadata": {
+                "count": 1.0,
+                "truncated": false
+              },
+              "output": "/workspaces/codespace/notebooks/opencode-demo.ipynb"
+            },
+            "status": "completed",
+            "tool_call_id": "call_0f18b3613cf9473ba41539bf",
+            "title": "glob",
+            "kind": "search",
+            "raw_input": {
+              "pattern": "**/opencode-demo.ipynb"
+            }
+          },
+          {
+            "title": "Jupyter_MCP_Server_read_notebook",
+            "tool_call_id": "call_11ea2590ece148d3a5d9573e",
+            "raw_output": {
+              "metadata": {
+                "truncated": false
+              },
+              "output": "```yaml\nkernelspec:\n  display_name: R 4.5.3 (xr)\n  language: R\n  name: xr\nlanguage_info:\n  codemirror_mode: ''\n  file_extension: .R\n  mimetype: text/x-R\n  name: R\n  nbconvert_exporter: ''\n  pygments_lexer: r\n  version: 4.5.3\n```\n\n### Cell 0\n\n#### Metadata\n\n```yaml\nid: 9d85f27d-4ba7-48ae-bb0f-639b98ef7772\ntype: code\n```\n\n#### Source\n\n```python\n```\n\n### Cell 1\n\n#### Metadata\n\n```yaml\nexecution_count: 2\nid: f08c46ff-5154-4dd9-982e-5e5501fb9d3f\ntype: code\n```\n\n#### Source\n\n```python\nlibrary(ggplot2)```\n\n### Cell 2\n\n#### Metadata\n\n```yaml\nexecution_count: 3\nid: 3330bc7e-a671-4925-a404-bf89b6d39b90\ntype: code\n```\n\n#### Source\n\n```python\nggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point()```"
+            },
+            "kind": "other",
+            "status": "completed",
+            "raw_input": {
+              "file_path": "notebooks/opencode-demo.ipynb"
+            }
+          }
+        ]
+      },
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+    },
+    {
+      "id": "fea5f4de-75b4-4b80-b0e0-4316355305c9",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "type": "msg",
+      "body": "It's an R notebook (`xr` kernel) with 3 cells:\n\n- **Cell 0**: empty\n- **Cell 1**: `library(ggplot2)`\n- **Cell 2**: a scatter plot of `cty` vs `hwy` from the `mpg` dataset using `geom_point()`",
+      "raw_time": false,
+      "time": 1791216077.669858,
+      "mentions": []
+    },
+    {
+      "time": 1791216135.280075,
+      "metadata": {
+        "model": {
+          "settings": {},
+          "id": null
+        },
+        "settings": {},
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+      },
+      "sender": "29d96556b36d42b39f4458abf5453d83",
+      "type": "msg",
+      "body": "Delete the empty cell please.",
+      "raw_time": false,
+      "id": "81181568-beea-46eb-b16b-9c0a05f6efcf"
+    },
+    {
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "metadata": {
+        "tool_calls": [
+          {
+            "tool_call_id": "call_d7f618c2a9fb48c3800ae9bb",
+            "raw_output": {
+              "output": "{\"success\":true}",
+              "metadata": {
+                "truncated": false
+              }
+            },
+            "raw_input": {
+              "cell_id": "9d85f27d-4ba7-48ae-bb0f-639b98ef7772",
+              "file_path": "notebooks/opencode-demo.ipynb"
+            },
+            "status": "completed",
+            "title": "Jupyter_MCP_Server_delete_cell",
+            "kind": "other"
+          }
+        ]
+      },
+      "type": "msg",
+      "body": "",
+      "time": 1791216136.7135227,
+      "raw_time": false,
+      "mentions": [],
+      "id": "a1d5ebd7-2fb7-45dd-bfe3-13b2fbd81c96"
+    },
+    {
+      "body": "Deleted. The notebook now has the `library(ggplot2)` cell and the scatter plot cell.",
+      "mentions": [],
+      "time": 1791216138.5842273,
+      "raw_time": false,
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "id": "891c4b2f-7b99-4726-8dee-b69d6a4979f7",
+      "type": "msg"
+    }
+  ],
+  "users": {
+    "29d96556b36d42b39f4458abf5453d83": {
+      "username": "29d96556b36d42b39f4458abf5453d83",
+      "name": "Anonymous Kale",
+      "color": "var(--jp-collaborator-color3)",
+      "bot": false,
+      "display_name": "Anonymous Kale",
+      "avatar_url": null,
+      "initials": "AK",
+      "mention_name": "Anonymous-Kale"
+    },
+    "hidden::jupyter_ai_system": {
+      "color": null,
+      "initials": null,
+      "bot": true,
+      "name": "System",
+      "username": "hidden::jupyter_ai_system",
+      "display_name": "System",
+      "avatar_url": null
+    },
+    "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona": {
+      "color": null,
+      "name": "OpenCode",
+      "bot": true,
+      "avatar_url": "/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3AOpenCodeAcpPersona",
+      "display_name": "OpenCode",
+      "initials": null,
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+    }
+  },
+  "attachments": {},
+  "metadata": {
+    "id": "b2564877-2394-4c9f-8978-20c81b344950",
+    "acp_session_ids": {
+      "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona": "ses_ef3343632ffeWomg8hC4rwTphy"
+    }
+  }
+}
